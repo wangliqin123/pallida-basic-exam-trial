@@ -10,18 +10,16 @@ namespace NameFromEmail
     {
         static void Main(string[] args)
         {
-            Console.Write("Please type your email address in the following format: firstName.lastName@exam.com");
+            Console.Write("Please type your email address in the following format:firstName.lastName@exam.com: ");
             string address = Console.ReadLine();
 
-            //NameFromEmail(address);
-            //Console.WriteLine(NameFromEmail("elek.viz@exam.com"));
             string firstname = NameFromEmail(address);
             Console.WriteLine(firstname);
             Console.ReadLine();
         }
+
         public static string NameFromEmail(string address)
         {
-
             string link = address;
             var firstpart = link.Split('@');
             string user = firstpart[0];
@@ -32,9 +30,7 @@ namespace NameFromEmail
             string lastname = names[1];
 
             return firstname;
-    
         }
-
     }
 }
  
