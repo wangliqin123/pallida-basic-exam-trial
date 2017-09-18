@@ -10,21 +10,24 @@ namespace OddFilter
     {
         static void Main(string[] args)
         {
-            // Create an OddFilter function that takes a list as a parameter,
-            // and returns a new list with every odd element from the orignal list
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+            OddFilter(numbers);
             List<int> oddElements = OddFilter(new List<int> { 1, 2, 3, 4, 5 });
-            
-            // In case of the example input above, the given PrintList function should print 1 3 5 
+
+
             PrintList(oddElements);
 
             Console.ReadLine();
         }
 
-        public static void OddFilter(List<int> oddElements)
+        private static void OddFilter(List<int> numbers)
         {
-            for (int i = 0; i < oddElements.Count; i++)
+            for (int i = 0; i < numbers.Count; i++)
             {
-                Console.WriteLine(i % 2 == 0 ? "even" : "odd");
+                if (i % 2 == 0)
+                {
+                    i 
+                } 
             }
         }
 
@@ -32,7 +35,8 @@ namespace OddFilter
         {
             foreach (int element in oddElements)
             {
-                Console.Write("{0} ", element);
+                Console.Write("{0} ", oddElements);
+                
             }
         }
     }
